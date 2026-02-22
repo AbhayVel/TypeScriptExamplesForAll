@@ -105,9 +105,34 @@ What is Type Assertion?
 
 let value: unknown = "Hello";
 
+//if(typeof value=='string')
 let length = (value as string).length;
 let length = (<string>value).length;
 
 Type Assertion Is NOT Type Conversion
+let value = "123" as number; // ❌
+
+
+
+What are Generics? Give a real automation example.
+
+What is keyof operator?
+
+What is typeof in TypeScript?
+
+What are mapped types?
+
+What are conditional types?
+
+What is utility type? Name commonly used ones.
+
+Explain Partial<T>, Required<T>, Readonly<T>.
+
+What is Record<K, T>?
+
+What is Pick and Omit?
+
+What is ReturnType<T>?
+
 
 

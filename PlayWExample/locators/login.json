@@ -1,0 +1,8 @@
+{
+    "url": "https://practicesoftwaretesting.com/",
+    "signinButton":"[data-test=\"nav-sign-in\"]",
+    "email": "[data-test=\"email\"]",
+    "password": "[data-test=\"password\"]",
+    "submit":"[data-test=\"login-submit\"]"
+
+}
