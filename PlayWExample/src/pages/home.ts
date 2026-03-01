@@ -1,15 +1,17 @@
 import { Page } from "@playwright/test";
 import { getLocators } from "../Utility/utility";
+import { BasePage } from "./BasePage";
 
 
-export class HomePage  {
+export default class HomePage  extends BasePage {
   
  
 
     locators: any;
-    page: Page;
+   // page: Page;
     constructor(page: any){
-        this.page=page;
+            super(page);
+       // this.page=page;
         this.locators=getLocators('./locators/login.json');
         console.log(this.locators);
     }
@@ -27,23 +29,27 @@ export class HomePage  {
     }
 
     async clickEmail(){
-         await this.page.locator(this.locators.email).click();
+         await this.click(this.locators.email);
     }
 
     async fillEmail(email: string){
-         await this.page.locator(this.locators.email).fill(email);
+          await this.fill(this.locators.email,email);
      }
 
      async pressEmail(email: string){
-         await this.page.locator(this.locators.email).press(email);
+         await this.press(this.locators.email,email);
      }
 
+      async clickPassword() {
+         await this.click(this.locators.password);
+      }
+
      async fillPassword(password: string) {
-         await this.page.locator(this.locators.password).fill(password);
+         await this.fill(this.locators.password, password);
       }
 
      async clickSubmit() {
-      await this.page.locator(this.locators.submit).click();
+      await this.click(this.locators.submit);
    
   }
      

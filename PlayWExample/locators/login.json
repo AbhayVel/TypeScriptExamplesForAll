@@ -1,8 +1,43 @@
 {
     "url": "https://practicesoftwaretesting.com/",
     "signinButton":"[data-test=\"nav-sign-in\"]",
-    "email": "[data-test=\"email\"]",
-    "password": "[data-test=\"password\"]",
-    "submit":"[data-test=\"login-submit\"]"
+    "email": [
+        {
+            "method": "locator",
+            "type": "textbox",
+            "value": "[type=\"emai\"]"
+        },
+        {
+            "method": "locator",
+            "value": "[data-test=\"email\"]"
+        }
+
+        
+    ],
+    "password": [
+        {
+            "method": "locator",
+            "type": "textbox",
+            "value": "[data-test=\"passwor\"]"
+        },
+        {
+            "method": "locator",
+            "value": "[data-test=\"password\"]"
+        }
+    ],
+    "submit":[
+        {
+            "method": "locator",
+            "type": "textbox",
+            "value": "[data-test=\"login-submit\"]"
+        },
+        {
+            "method": "locator",
+            "value": "[data-test=\"login-submit\"]"
+        }
+    ]
 
 }
+
+
+ 

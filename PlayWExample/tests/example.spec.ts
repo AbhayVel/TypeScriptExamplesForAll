@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../src/pages/home';
+import  HomePage  from '../src/pages/home';
 
-test('has title', async ({ page }) => {
+test('Validate Login Page', async ({ page }) => {
 
   const home= new HomePage(page);
 
@@ -12,16 +12,11 @@ test('has title', async ({ page }) => {
   await home.clickSignInButton();
   await home.clickEmail();
   await home.fillEmail('customer@practicesoftwaretesting.com');
-  await home.pressEmail('Tab');
+  //await home.pressEmail('Tab');
+  await home.clickPassword();
   await home.fillPassword('welcome01');
   await  home.clickSubmit();
-  // await page.goto('https://practicesoftwaretesting.com/');
-  // await page.locator('[data-test="nav-sign-in"]').click();
-  // await page.locator('[data-test="email"]').click();
-  // await page.locator('[data-test="email"]').fill('customer@practicesoftwaretesting.com');
-  // await page.locator('[data-test="email"]').press('Tab');
-  // await page.locator('[data-test="password"]').fill('welcome01');
-  // await page.locator('[data-test="login-submit"]').click();
+  
 });
 
 // test('get started link', async ({ page }) => {
